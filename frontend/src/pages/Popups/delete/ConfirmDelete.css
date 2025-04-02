@@ -1,0 +1,93 @@
+.confirmdelete-card {
+  width: 75%; /* Change to percentage for responsiveness */
+  max-width: 500px; /* Limit the maximum width */
+  height: fit-content;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px; /* Adjusted padding for smaller screens */
+  position: fixed; /* Changed to fixed for consistent positioning */
+  top: 50%; /* Center vertically */
+  left: 55%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset for perfect centering */
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.068);
+}
+
+.confirmdelete-card-content {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.confirmdelete-card-heading {
+  font-size: 18px; /* Adjusted font size for smaller screens */
+  font-weight: 700;
+  color: rgb(27, 27, 27);
+  text-align: center; /* Center text for better readability */
+}
+
+.confirmdelete-card-description {
+  font-weight: 100;
+  color: rgb(102, 102, 102);
+  text-align: center; /* Center text for better readability */
+}
+
+.confirmdelete-card-button-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Use space-between for better button placement */
+  gap: 10px;
+}
+
+.confirmdelete-card-button {
+  width: 48%; /* Adjusted width for better responsiveness */
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primary {
+  background-color: #83B4FF;
+  color: white;
+}
+
+.primary:hover {
+  background-color: #c3e1f9;
+}
+
+.secondary {
+  background-color: rgb(197, 197, 197);
+}
+
+.secondary:hover {
+  background-color: rgb(210, 210, 210);
+}
+
+.exit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 10px; /* Adjusted for better positioning on smaller screens */
+  right: 10px; /* Adjusted for better positioning on smaller screens */
+  cursor: pointer;
+}
+
+.exit-button:hover svg {
+  fill: black;
+}
+
+.exit-button svg {
+  fill: rgb(175, 175, 175);
+}

@@ -1,0 +1,234 @@
+.welcome-user-container {
+  background-color: white;
+  box-shadow: 0 .4rem .8rem #0005;
+  border-radius: .8rem;
+  width: 75%;
+  height: 610px;
+  align-self: center;
+}
+
+.text__container {
+  display: flex;
+  flex-direction: column;
+  font-size: 45px;
+  margin-top: 30px;
+  text-align: center;
+  font-weight: 100;
+  color: #909090;
+  font-family: "Alkatra";
+}
+
+.text__container p {
+  margin-bottom: 0em;
+}
+
+em {
+  color: #83B4FF;
+}
+
+.text__animated {
+  animation: typing 2s steps(18);
+  cursor: .4s;
+  border-right: 5px solid;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 50%
+  }
+}
+
+.cards__container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 30px;
+  justify-content: center;
+  font-family: "Alkatra";
+}
+
+.cookieCard {
+  width: 250px;
+  height: 150px;
+  background: linear-gradient(to right, #83B4FF, #a0c6ff);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+  padding-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cookieCard::before {
+  width: 70px;
+  height: 150px;
+  content: "";
+  background: linear-gradient(to right, #c3e1f9, #96caf4);
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  right: -25%;
+  top: -25%;
+}
+
+.cookieHeading {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: rgb(241, 241, 241);
+  z-index: 2;
+}
+
+.cookieDescription {
+  font-size: 0.9em;
+  color: rgb(241, 241, 241);
+  z-index: 2;
+}
+
+.learn-more {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  bottom: 0px;
+}
+
+.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border-radius: 1.625rem;
+  border: 3px solid white;
+}
+
+.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+}
+
+.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.6rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: white;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.learn-more:hover .circle {
+  width: 100%;
+}
+
+.learn-more:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+@media (max-width: 900px) {
+  .welcome-user-container {
+    width: 95%;
+    height: 800px;
+  }
+  .text__container {
+    font-size: 30px;
+  }
+  .cards__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-user-container {
+    width: 90%;
+  }
+
+  .text__container {
+    font-size: 19px;
+  }
+
+  .cards__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+  }
+
+  .cookieCard {
+
+    height: 110px;
+    padding-top: 5px;
+  }
+
+  .cookieHeading {
+    font-size: 1.1em;
+  }
+
+  .cookieDescription {
+    font-size: 0.8em;
+  }
+
+  .learn-more {
+    width: 12rem;
+    height: 15px;
+  }
+}

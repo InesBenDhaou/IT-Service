@@ -1,0 +1,455 @@
+.table__page__container {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--body-color);
+    gap:10px;
+    min-height: 110vh;
+}
+.sidebar__container {
+    width: 20%;
+}
+.table__page__content__container {
+    display: flex;
+    margin-right: 35px;
+    flex-direction: column;
+    height: fit-content;
+    min-height: 110vh;
+    width: 80%;
+    gap: 40px;
+}
+
+
+
+.table {
+    width: 82vw;
+    height: 80vh;
+    background-color: white;
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+    overflow: hidden;
+}
+
+.table__header {
+    width: 100%;
+    height: 10%;
+    background-color: #fff4;
+    padding: .8rem 1rem;
+    font-family: "Alkatra";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table__header h1 {
+    color: #909090;
+}
+
+.table__header .input-group-search {
+    width: 35%;
+    height: 100%;
+    background-color: #c3e1f9;
+    padding: 0 .8rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+}
+
+.table__header .input-group-search:hover {
+    width: 45%;
+    background-color: #fff8;
+    box-shadow: 0 .1rem .4rem #0002;
+}
+
+.table__header .input-group-search img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.table__header .input-group-search input {
+    width: 100%;
+    padding: 0 .5rem 0 .3rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.table__body {
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #fffb;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+    overflow: overlay;
+}
+
+
+.table__body::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+
+table {
+    width: 100%;
+}
+
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: left;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 30px;
+    background-color: #d5d1defe;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #0000000b;
+}
+
+tbody tr {
+    --delay: .1s;
+    transition: .5s ease-in-out var(--delay), background-color 0s;
+    height: 60px;
+}
+
+tbody tr th {
+    height: 50px;
+}
+
+tbody tr.hide {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+tbody tr:hover {
+    background-color: #fff6 !important;
+}
+
+td img {
+    width: 36px;
+    height: 36px;
+    margin-right: .5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+
+tbody tr td,
+tbody tr td p,
+tbody tr td img {
+    transition: .2s ease-in-out;
+}
+
+tbody tr.hide td,
+tbody tr.hide td p {
+    padding: 0;
+    font: 0 / 0 sans-serif;
+    transition: .2s ease-in-out .5s;
+}
+
+tbody tr.hide td img {
+    width: 0;
+    height: 0;
+    transition: .2s ease-in-out .5s;
+}
+
+.status {
+    padding: .4rem 0;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.status.delivered {
+    background-color: #86e49d;
+    color: #006b21;
+}
+
+.status.cancelled {
+    background-color: #d893a3;
+    color: #b30021;
+}
+
+.status.pending {
+    background-color: #ebc474;
+}
+
+.status.shipped {
+    background-color: #6fcaea;
+}
+
+.manage__icons__container {
+    display: flex;
+    gap: 20px;
+    justify-content: left;
+    padding-left: 5px;
+}
+
+.manage__icon {
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    color: #83B4FF;
+    /* Change this to your desired color */
+    border: 2px solid #83B4FF;
+    /* Change this to your desired border color */
+}
+
+.manage__icon:hover {
+    background-color: #83B4FF;
+    color: white;
+}
+
+.accept__icon {
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    color: #86e49d;
+    /* Change this to your desired color */
+    border: 2px solid #86e49d;
+    /* Change this to your desired border color */
+}
+
+.accept__icon:hover {
+    background-color: #86e49d;
+    color: white;
+}
+
+.refuse__icon {
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    color: #ff4f4f;
+    /* Change this to your desired color */
+    border: 2px solid #ff4f4f;
+    /* Change this to your desired border color */
+}
+
+.refuse__icon:hover {
+    background-color: #ff4f4f;
+    color: white;
+}
+
+.cssbuttons-io-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .2em;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    padding: .5em 1.5em;
+    color: white;
+    background: linear-gradient(0deg, #83B4FF, #96C9F4);
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #83B4FF;
+    box-shadow: 0 .5em .5em -.4em rgb(0, 0, 0, .5);
+    letter-spacing: 0.08em;
+    border-radius: 20em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.cssbuttons-io-button:hover {
+    filter: brightness(1.2);
+    color: rgb(0, 0, 0, .5);
+}
+
+.cssbuttons-io-button:active {
+    transition: 0s;
+    transform: rotate(-10deg);
+}
+
+@media (max-width: 1000px) {
+    td:not(:first-of-type) {
+        min-width: 12.1rem;
+    }
+}
+
+thead th span.icon-arrow {
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    border: 1.4px solid transparent;
+
+    text-align: center;
+    font-size: 1rem;
+
+    margin-left: .5rem;
+    transition: .2s ease-in-out;
+}
+
+thead th:hover span.icon-arrow {
+    border: 1.4px solid #83B4FF;
+}
+
+thead th:hover {
+    color: #83B4FF;
+}
+
+thead th.active span.icon-arrow {
+    background-color: #83B4FF;
+    color: #fff;
+}
+
+thead th.asc span.icon-arrow {
+    transform: rotate(180deg);
+}
+
+thead th.active,
+tbody td.active {
+    color: #83B4FF;
+}
+
+/* Hide the default checkbox */
+.custom-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.custom-checkbox {
+    position: relative;
+    top: -3px;
+    user-select: none;
+}
+
+.custom-checkbox .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 3px;
+}
+
+.custom-checkbox input:checked+.checkmark {
+    background-color: #83B4FF;
+}
+
+.custom-checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-checkbox input:checked+.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom-checkbox .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.table__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+@media (max-width: 900px) {
+    .sidebar__container {
+        width: 20%;
+    }
+    .table__page__container {
+        gap:0px;  
+    }
+    .table__page__content__container {
+        gap: 20px;
+        margin-right: 10px;
+   }
+   .table__header .input-group-search {
+    width: 35%;
+    height: 60%;
+}
+.cssbuttons-io-button {
+    width: 80px;
+}
+.table__header h1 {
+    font-size: 27px;
+}
+
+}
+
+@media (max-width: 480px) {
+    .sidebar__container {
+        width: 15%;
+    }
+    .table__page__container {
+        gap:0px;  
+    }
+    .table__page__content__container {
+         gap: 20px;
+         margin-right: 10px;
+    }
+   
+    .table__header h1 {
+        font-size: 20px;
+    }
+    .cssbuttons-io-button {
+        width: 55px;
+        font-weight: 100;
+        font-size: 10px;
+        border-bottom: 1px solid #83B4FF;
+    }
+    
+.table tr {
+   font-size: 12px;
+}
+.table th {
+    font-size: 14px;
+ }
+.status {
+    padding: .1rem 0;
+    width: 100px;
+    border-radius: 2rem;
+    text-align: center;
+}
+.manage__icon {
+    width: 25px;
+    height: 25px;
+}
+.manage__icons__container {
+    padding-left: 0px;
+}
+
+  }

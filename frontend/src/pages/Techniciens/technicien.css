@@ -1,0 +1,37 @@
+.details__conatiner{
+    display: flex;
+    flex-direction:row ;
+    gap:100px;
+}
+
+.details__conatiner img {
+    width:150px;
+    height: 150px;
+}
+
+.part__details {
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.part1__details ,.part2__details{
+    display: flex;
+    flex-direction:row ;
+    gap : 5px;
+}
+
+.part1__details .input-field-Urgence select {
+    margin-top: 7px;
+}
+
+@media (max-width: 480px) {
+.details__conatiner{
+    flex-direction:column ;
+    gap:5px;
+}
+
+.part1__details ,.part2__details{
+    flex-direction:column ;
+}
+}

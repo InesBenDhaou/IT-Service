@@ -1,0 +1,98 @@
+.Validpopup__container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.notificationCard {
+  width: 90%;
+  max-width: 360px;
+  height: auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.123);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.notificationPara {
+  color: rgb(133, 133, 133);
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.AllowBtn, .NotnowBtn {
+  width: 100%;
+  max-width: 120px;
+  height: 35px;
+  border-radius: 20px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.AllowBtn {
+  background-color: #83B4FF;
+  color: white;
+  border: none;
+}
+
+.AllowBtn:hover {
+  background-color: #c3e1f9;
+}
+
+.NotnowBtn {
+  background-color: transparent;
+  color: #83B4FF;
+  border: none;
+}
+
+.NotnowBtn:hover {
+  background-color: #d9edfd;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .notificationCard {
+      padding: 15px;
+      gap: 10px;
+  }
+
+  .notificationPara {
+      font-size: 1.3em;
+  }
+
+  .AllowBtn, .NotnowBtn {
+      font-size: 0.9em;
+      height: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .notificationCard {
+      padding: 10px;
+  }
+
+  .notificationPara {
+      font-size: 1.1em;
+  }
+
+  .AllowBtn, .NotnowBtn {
+      font-size: 0.8em;
+      height: 25px;
+  }
+}

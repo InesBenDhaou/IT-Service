@@ -1,0 +1,474 @@
+.ticketForm__content {
+    width: 80%;
+    padding: 30px;
+    margin: 0px 15px;
+    background-color: white;
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+    overflow: hidden;
+    align-self: center;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ticketForm__content header {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.ticketForm__content header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: #83B4FF;
+}
+
+.ticketForm__content form {
+    position: relative;
+    margin-top: 16px;
+    background-color: #fff;
+    overflow: hidden;
+
+}
+
+.ticketForm__content form .form {
+    position: relative;
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+
+.ticketForm__content form .form.second {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+
+form.secActive .form.second {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+form.secActive .form.first {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
+
+.ticketForm__content form .title {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+
+.ticketForm__content form .fields {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.input-file-field {
+    align-items: center;
+    justify-content: center;
+    margin: 4px 0;
+    padding-top: 3px;
+}
+
+.input-file-field input {
+    align-self: center;
+}
+
+.input-field-date,
+.input-field-select,
+.input-field-localisation,
+.input-field-Urgence,
+.input-field-id,
+.input-field-benif,
+.input-field-description,
+.input-field-Categorie, .input-field-piécejoint ,.input-field-piécejoint-edit {
+    display: flex;
+    flex-direction: column;
+    margin: 4px 0;
+}
+
+
+
+.file-select_option {
+    display: flex;
+    gap:5px;
+    align-items: center;
+}
+
+.input-field-date {
+    width: fit-content;
+}
+
+.input-field-description {
+    width: 500px;
+}
+
+.input-field-select {
+    width: fit-content;
+    height: 60px;
+}
+
+.input-field-piécejoint{
+    margin-top: 20px;
+    width:fit-content;
+}
+
+.input-field-piécejoint-edit{
+    width:fit-content;
+}
+
+.input-field-localisation {
+    width: 180px;
+}
+
+.input-field-Urgence {
+    width: fit-content;
+}
+
+.input-field-id {
+    width: 100px;
+}
+
+form .fields .input-field {
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+
+.input-field-benif {
+    width: fit-content;
+}
+
+.input-field-Categorie {
+    width: 400px;
+}
+
+.input-field label,
+.input-field-id label,
+.input-field-Urgence label,
+.input-field-date label,
+label,
+.input-field-localisation label,
+.input-field-select label,
+.input-field-Categorie label,
+.input-file-field label,
+.input-field-benif label ,
+.input-field-piécejoint label ,
+.input-field-description label,
+.input-field-piécejoint-edit label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.input-field input,
+select,
+.input-field-id input,
+.input-field textarea,
+.input-field-date input,
+.input-field-benif input,
+.input-field-localisation input,
+.input-field-select select,
+.input-file-field input,
+.input-field-Categorie select ,
+.input-field-piécejoint select ,
+.input-field-description textarea,
+.input-field-piécejoint-edit select  {
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 10px;
+    height: 42px;
+    margin: 8px 0;
+}
+
+
+.input-field input:focus,
+.input-field-id:focus,
+.input-field textarea:focus,
+.input-field select:focus,
+.input-field-Urgence select:focus,
+.input-field-date:focus,
+.input-field-benif:focus,
+.input-field-localisation:focus,
+.input-field-select select:focus,
+.input-file-field:focus,
+.input-field-Categorie:focus ,
+.input-field-piécejoint:focus,
+.input-field-description:focus,
+.input-field-piécejoint-edit:focus{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.input-field select,
+.input-field-id,
+.input-field-Urgence select,
+.input-field-date,
+.input-field-benif,
+.input-file-field,
+select,
+.input-field-Categorie,
+.input-field-piécejoint-edit {
+    color: #707070;
+}
+
+.input-field-date:valid {
+    color: #333;
+}
+
+.editor-container {
+    max-width: 100%;
+    padding: 0 15px; /* Add some padding for mobile */
+  }
+  
+  /* Make the editor responsive */
+.editor {
+    width: 100% !important; /* Force the editor to take full width */
+    height: auto !important; /* Let the height adjust automatically */
+  }
+
+.nextBtn,
+.annulerBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px 0;
+    background-color: #83B4FF;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    height: 35px;
+}
+
+.nextBtn {
+    max-width: 150px;
+}
+
+.annulerBtn {
+    max-width: 100px;
+}
+
+.ticketForm__content form .btnText {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.nextBtn:hover,
+.annulerBtn:hover {
+    background-color: #c3e1f9;
+}
+
+.nextBtn i {
+    color: white;
+    margin: 0 6px;
+    width: 20px;
+    height: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.editor-container {
+    width: 100%; /* Ensure the parent container is 100% width */
+    max-width: 100%;
+  }
+
+@media (max-width: 900px) {
+    .ticketForm__content form {
+        overflow-x: scroll;
+    }
+
+   
+    
+}
+
+@media (max-width: 750px) {
+    .ticketForm__content form {
+        overflow-y: scroll;
+    }
+
+    .ticketForm__content form::-webkit-scrollbar {
+        display: none;
+    }
+
+    form .fields .input-field {
+        width: calc(100% / 2 - 15px);
+    }
+    .input-file-field input {
+        width: 210px
+    }
+    .part__details input {
+        width: 190px
+    }
+    .input-field input[type="file"] {
+        width: 210px;
+    }
+   
+    
+}
+.wrapper {
+    --font-color-dark: #323232;
+    --font-color-light: #FFF;
+    --bg-color: #fff;
+    --main-color: #83B4FF;
+    position: relative;
+    width: 330px;
+    height: 38px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 34px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 4px 4px var(--main-color);
+}
+
+.option-status {
+    width: 80.5px;
+    height: 28px;
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    appearance: none;
+    cursor: pointer;
+}
+
+.btn-status {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.span {
+    color: var(--font-color-dark);
+}
+
+.input:checked+.btn-status {
+    background-color: var(--main-color);
+}
+
+.input:checked+.btn-status .span {
+    color: var(--font-color-light);
+}
+
+.error {
+    width: 90%; /* Change to percentage for responsiveness */
+    max-width: 500px; /* Limit the maximum width */
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-between; /* Use space-between for better layout */
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #83B4FF;
+    box-shadow: 0px 0px 5px -3px #111;
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
+}
+
+.error__icon {
+    width: 24px; /* Slightly larger icon for better visibility on all devices */
+    height: 24px;
+    margin-right: 12px; /* Increase spacing for better layout */
+    flex-shrink: 0; /* Prevent the icon from shrinking on smaller screens */
+}
+
+.error__icon path {
+    fill: #83B4FF;
+}
+
+.error__title {
+    font-weight: 500;
+    font-size: 14px;
+    color: grey;
+    flex-grow: 1; /* Allow title to take available space */
+}
+
+.error__close {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 12px; /* Maintain spacing from the title */
+    flex-shrink: 0; /* Prevent the close button from shrinking on smaller screens */
+}
+
+.error__close path {
+    fill: #83B4FF;
+}
+
+
+.title {
+    padding-top: 15px;
+}
+.piece_joint_icons {
+    display: flex;
+    gap: 5px;
+}
+
+.component__img {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 550px) {
+    form .fields .input-field {
+        width: 100%;
+    }
+    .wrapper {
+        width: 210px;
+        height: 38px;
+    }
+    .option-status {
+        width: 50px;
+        font-size: 10px;
+        height: 30px;
+        position: relative;
+        top: 2px;
+        left: 2px;
+    }
+    .file-select_option {
+        display: flex;
+        flex-direction: column;
+    }
+    .component__img {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
